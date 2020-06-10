@@ -1,0 +1,23 @@
+<h1 matDialogTitle>Rename</h1>
+
+<mat-dialog-content>
+
+    <p>
+        <span style="color:#fff">
+          Current Filename:
+          <br />
+          <i>*{{currentFilename}}</i>
+    </span>
+    </p>
+
+    <mat-form-field>
+        <input matInput placeholder="Filename  : " [(ngModel)]="receiveEvent.filename" required #inputfoldername=ngModel>
+    </mat-form-field>
+    <br />
+    <span *ngIf="responseError" style="color: red">*<i>{{responseError}}</i></span>
+</mat-dialog-content>
+
+<mat-dialog-actions>
+    <button mat-raised-button (click)="send()" color="primary">Confirm</button>
+    <button mat-raised-button (click)="cancel()" color="warn">Cancel</button>
+</mat-dialog-actions>

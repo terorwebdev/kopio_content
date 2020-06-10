@@ -1,0 +1,19 @@
+[{
+        "id": 1,
+        "icon": "",
+        "route": "content-list",
+        "name": "Content List"
+    },
+    {
+        "id": 2,
+        "icon": "",
+        "route": "file-sharing",
+        "name": "File Sharing"
+    },
+    {
+        "id": 3,
+        "icon": "",
+        "route": "setting",
+        "name": "Setting"
+    }
+]

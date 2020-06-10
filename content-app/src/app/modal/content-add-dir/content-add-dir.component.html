@@ -1,0 +1,14 @@
+<h1 matDialogTitle>Add Folder</h1>
+
+<mat-dialog-content>
+    <mat-form-field>
+        <input matInput placeholder="Folder Name  : " [(ngModel)]="foldername" required #inputfoldername=ngModel>
+    </mat-form-field>
+    <br />
+    <span *ngIf="responseError" style="color: red">*<i>{{responseError}}</i></span>
+</mat-dialog-content>
+
+<mat-dialog-actions>
+    <button mat-raised-button (click)="send()" color="primary">Add Folder</button>
+    <button mat-raised-button (click)="cancel()" color="warn">Cancel</button>
+</mat-dialog-actions>

@@ -1,0 +1,56 @@
+.layout {
+    padding-top: 20px;
+    padding-right: 50px;
+    padding-bottom: 50px;
+    padding-left: 20px;
+    height: 100%;
+}
+
+.titleheaderpath {
+    background: #cbcecc;
+    color: rgba(0, 0, 0, .87);
+    box-shadow: 0 3px 5px -1px rgba(0, 0, 0, .2), 0 6px 10px 0 rgba(0, 0, 0, .14), 0 1px 18px 0 rgba(0, 0, 0, .12);
+}
+
+.headerpath {
+    background: #cbcecc;
+    color: rgba(0, 0, 0, .87);
+    box-shadow: 0 3px 5px -1px rgba(0, 0, 0, .2), 0 6px 10px 0 rgba(0, 0, 0, .14), 0 1px 18px 0 rgba(0, 0, 0, .12);
+}
+
+.tableContainer {
+    background: #cbcecc;
+    color: rgba(0, 0, 0, .87);
+    width: 100%;
+    height: calc(100vh - 224px) !important;
+    overflow: auto;
+}
+
+.mat-row:hover {
+    background-color: rgba(119, 136, 153, 0.226);
+}
+
+.menu-button:hover {
+    background-color: #fff;
+    ;
+    color: purple;
+}
+
+.pointer {
+    cursor: pointer;
+}
+
+.fill-remaining-space {
+    /* This fills the remaining space, by using flexbox.
+     Every toolbar row uses a flexbox row layout. */
+    flex: 1 1 auto;
+}
+
+.form-control {
+    box-shadow: 0 10px 40px 0 #B0C1D9;
+    width: 30%
+}
+
+.form-control::placeholder {
+    font-family: FontAwesome;
+}

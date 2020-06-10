@@ -1,0 +1,36 @@
+<h1 matDialogTitle>Upload File To {{selectedPath.path}}/{{selectedPath.filename}}</h1>
+
+<mat-dialog-content>
+    <form (ngSubmit)="send()">
+        <div class="form-group fixed">
+            <label for="file" class="custom-file-upload">
+              <mat-icon>file_upload</mat-icon> Select Files
+            </label>
+            <input type="file" id="file" multiple (change)=fileProgress($event)>
+            <span class="fill-remaining-space"></span>
+            <button mat-raised-button class="right" color="primary">Submit</button>
+        </div>
+        <br>
+        <div *ngFor="let file of fileData; let i=index">
+            <div class="right">
+                <ng-container *ngIf="isSuccess[i]; else notSuccess">
+                    <mat-icon aria-label="success">done</mat-icon>
+                </ng-container>
+                <ng-template #notSuccess>
+                    <mat-icon aria-label="notSuccess">clear</mat-icon>
+                </ng-template>
+            </div>
+            <div>
+                {{i+1}}. {{file.name}} - {{file.type}} - {{file.size}}
+                <mat-progress-bar mode="determinate" [value]="valueUploaded[i]" color="primary"></mat-progress-bar>
+            </div>
+            <br>
+        </div>
+    </form>
+</mat-dialog-content>
+
+<mat-dialog-actions>
+    <span class="fill-remaining-space"></span>
+    <button mat-raised-button (click)="cancel()" color="warn">Close</button>
+    <span class="fill-remaining-space"></span>
+</mat-dialog-actions>

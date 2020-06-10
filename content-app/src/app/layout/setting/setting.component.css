@@ -1,0 +1,17 @@
+.layout {
+    padding-top: 20px;
+    padding-right: 50px;
+    padding-bottom: 50px;
+    padding-left: 20px;
+    height: 100%;
+}
+
+.fill-remaining-space {
+    /* This fills the remaining space, by using flexbox.
+   Every toolbar row uses a flexbox row layout. */
+    flex: 1 1 auto;
+}
+
+.tablayout {
+    padding: 20px;
+}
